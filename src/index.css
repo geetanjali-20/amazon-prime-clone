@@ -1,0 +1,9 @@
+body{
+  background-color: #00050d;
+  color: #ffffff;
+  margin: 0;
+  font-family: Amazon Ember, Amazon Arabic Ember, Arial, sans-serif !important;
+}
+button{
+  cursor: pointer;
+}
