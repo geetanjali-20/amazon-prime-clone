@@ -18,7 +18,7 @@ function Banner() {
 		async function fetchData() {
 			//to fetch top rated moviesfor banner section
 			const request = await axios.get(requests.fetchTopRated);
-			const values = request.data.results.slice(0, 6);
+			const values = request.data.results.slice(1, 7);
 			setMovies(values || []);
 			return request;
 		}
@@ -45,7 +45,7 @@ function Banner() {
 			<div className="banner__contents">
 				<img loading="lazy" src={blueLogo} alt="Prime Video Logo" className="banner__logo" />
 				<h1 className="banner__title">{movie.title || movie.name || movie.original_name}</h1>
-				<div className="banner_trending">#{currentIndex + 1} in India</div>
+				<div className="banner_trending">#{currentIndex + 1} in Worldwide</div>
 				<h1 className="banner__description">{truncateString(movie.overview, 150)}</h1>
 
 				<div className="banner__buttons">

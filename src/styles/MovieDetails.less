@@ -10,3 +10,32 @@
     letter-spacing: .02em;
   }
 }
+.pagination-controls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0;
+  margin-left: -2rem;
+  button{
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    &:hover{
+      background-color: #f0f0f0;
+    }
+    &:disabled{
+      background-color: #b9b6b6;
+      cursor: not-allowed;
+    }
+  }
+  .prev{
+    margin-right: 16px;
+  }
+  .next{
+    margin-left: 16px;
+  }
+}
