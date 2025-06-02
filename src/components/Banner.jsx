@@ -43,7 +43,7 @@ function Banner() {
 			}}
 		>
 			<div className="banner__contents">
-				<img src={blueLogo} alt="Prime Video Logo" className="banner__logo" />
+				<img loading="lazy" src={blueLogo} alt="Prime Video Logo" className="banner__logo" />
 				<h1 className="banner__title">{movie.title || movie.name || movie.original_name}</h1>
 				<div className="banner_trending">#{currentIndex + 1} in India</div>
 				<h1 className="banner__description">{truncateString(movie.overview, 150)}</h1>
@@ -56,16 +56,16 @@ function Banner() {
 					</button>
 				</div>
 				<div className="watchprime">
-					<img src={cart} />
+					<img loading="lazy" src={cart} />
 					Watch with a Prime membership
 				</div>
 				<div className="banner__carousel-controls">
 					<button onClick={handlePrev} className="banner__carousel-btn">
-						<img src={arrowButton} className="leftArrow arrowIcon" />
+						<img loading="lazy" src={arrowButton} className="leftArrow arrowIcon" />
 					</button>
 
 					<button onClick={handleNext} className="banner__carousel-btn">
-						<img src={arrowButton} className="arrowIcon" />
+						<img loading="lazy" src={arrowButton} className="arrowIcon" />
 					</button>
 				</div>
 				<div className="banner__carousel-dots">

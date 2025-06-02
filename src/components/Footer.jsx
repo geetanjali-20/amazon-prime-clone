@@ -5,7 +5,7 @@ import amazonLogo from "../assets/primeFooterLogo.png";
 const Footer = () => {
 	return (
 		<div className="footer">
-			<img src={amazonLogo} alt="Amazon Prime Video Logo" className="footer_logo" />
+			<img loading="lazy" src={amazonLogo} alt="Amazon Prime Video Logo" className="footer_logo" />
 			<div className="footer_text">
 				<ul>
 					<li className="terms">Terms and Privacy Notice</li>

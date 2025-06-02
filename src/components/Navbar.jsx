@@ -36,15 +36,15 @@ const Navbar = () => {
 					))}
 					<div className="bar"></div>
 					<button className="whitelogoButton">
-						<img src={whiteLogo} alt="whiteLogo" className="" style={{ height: "28px", width: "47px" }} />
+						<img loading="lazy" src={whiteLogo} alt="whiteLogo" className="" style={{ height: "28px", width: "47px" }} />
 					</button>
 					<button className="">
-						<img src={menu} className="navIcons" style={{ height: "24px", width: "24px" }} />
+						<img loading="lazy" src={menu} className="navIcons" style={{ height: "24px", width: "24px" }} />
 						Subscriptions
 					</button>
 				</div>
 				<div className="navRight">
-					<img src={search} className="navIcons" />
+					<img loading="lazy" src={search} className="navIcons" />
 					<div className="lang">
 						<span>
 							EN
@@ -58,8 +58,8 @@ const Navbar = () => {
 							</svg>
 						</span>
 					</div>
-					<img src={dialpad} className="navIcons" />
-					<img src={avatar} className="avatar" />
+					<img loading="lazy" src={dialpad} className="navIcons" />
+					<img loading="lazy" src={avatar} className="avatar" />
 					<button className="join">Join Prime </button>
 				</div>
 			</div>

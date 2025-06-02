@@ -38,8 +38,8 @@ function Row({ title, fetchUrl, isLargeRow }) {
 					{movies.map((movie) => (
 						<div className={`movieCard ${isLargeRow && "row_posterLarge"}`} key={movie.id} style={{ backgroundImage: `url(${baseurl}${isLargeRow ? movie.poster_path : movie.backdrop_path})` }}>
 							<div className="movieCardOverlay">
-								<img src={cart} className="cart" />
-								<img src={whitelogo} className="whitelogo" />
+								<img loading="lazy" src={cart} className="cart" />
+								<img loading="lazy" src={whitelogo} className="whitelogo" />
 							</div>
 						</div>
 					))}
