@@ -3,6 +3,10 @@
 A responsive and dynamic clone of Amazon Prime Video, built using modern frontend technologies. It features movie listings, hover effects, and UI inspired by the official platform.
 
 🚀 [Live Demo](https://amazon-prime-clone-five.vercel.app/)
+---
+## Web Performance 
+
+![image](https://github.com/user-attachments/assets/ab9a584c-57e2-4d99-9d11-e804e3b84321)
 
 ---
 
@@ -12,7 +16,6 @@ A responsive and dynamic clone of Amazon Prime Video, built using modern fronten
 
 
 ---
-
 ## 🛠️ Tech Stack
 
 - **React.js** – Core UI library
