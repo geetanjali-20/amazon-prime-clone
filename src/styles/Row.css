@@ -70,13 +70,58 @@
 } */
 .movieCard:hover {
 	transform: scale(1.1);
-    border-radius: 10px;
+	border-radius: 10px;
 }
 .row_posterLarge {
 	max-height: 388px;
-    height: 388px;
+	height: 388px;
 }
 
 .row_posterLarge:hover {
 	transform: scale(1.09);
+}
+
+@media (max-width: 1024px) {
+	.movieTitle {
+		margin: 0px;
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 20px;
+		padding-bottom: 8px;
+	}
+	.seeMore {
+		color: #fff;
+		font-size: 16px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		margin-left: 10px !important;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		margin-left: 36px;
+	}
+
+	.movieCard {
+		position: relative;
+		background-size: cover;
+		min-width: 210px;
+		max-width: 210px;
+		object-fit: contain;
+		max-height: 118px;
+		height: 118px;
+		margin-right: 12px;
+		transition: transform 450ms;
+		border-radius: 8px;
+		cursor: pointer;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	}
+	.movieCard:hover {
+		transform: scale(1);
+		border-radius: 8px;
+	}
+	.movieCardOverlay {
+		height: 14px;
+	}
 }

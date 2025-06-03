@@ -26,13 +26,30 @@
 		.terms {
 			color: #79b8f3;
 			transition: color 0.2s ease-in-out;
-      cursor: pointer;
+			cursor: pointer;
 		}
 		.years {
 			color: #8197a4;
 			display: inline-block;
 			padding: 4px;
 			white-space: normal;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.footer {
+		padding-bottom: 100px;
+		.footer_text {
+			ul {
+				align-items: center;
+				li {
+					font-size: 12px;
+				}
+				.years {
+					display: block;
+				}
+			}
 		}
 	}
 }

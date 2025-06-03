@@ -7,7 +7,8 @@
 	z-index: 1;
 	padding: 0px 21px;
 	gap: 15vw;
-	margin: 0px 51px;
+	margin: 0px 4%;
+	width: 90%;
 
 	.tabs {
 		display: flex;
@@ -162,4 +163,107 @@
 .transparentNavbar {
 	background: transparent;
 	box-shadow: none;
+}
+
+// ...existing code...
+
+.desktopNavButtons {
+	display: flex;
+}
+.mobileMenuBtn {
+	display: none;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+.mobileDropdown {
+	display: none;
+	position: absolute;
+	top: 60px; // adjust as needed
+	left: 0;
+	right: 0;
+	background: #181818;
+	z-index: 100;
+	flex-direction: column;
+	padding: 10px 0;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.mobileDropdown .navButton {
+	width: 100%;
+	text-align: left;
+	padding: 12px 24px;
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 16px;
+}
+.menu {
+	display: none;
+}
+
+@media (max-width: 1024px) {
+	.desktopNavButtons {
+		display: none;
+	}
+	.mobileMenuBtn {
+		display: inline-block;
+	}
+	.mobileDropdown {
+		display: flex;
+		max-width: 185px;
+		left: 10px;
+		background: rgba(25, 30, 37, 0.8);
+		border-radius: 12px;
+		backdrop-filter: blur(8px);
+		top: 50px;
+	}
+
+	.navbarSection {
+		background-color: #00050d;
+		height: 48px;
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+		gap: unset;
+		justify-content: space-evenly;
+		border-radius: 0px;
+
+		.navIcons,
+		.join,
+		.sub,
+		.bar,
+		.whitelogoButton {
+			display: none !important;
+		}
+		.search {
+			display: block !important;
+		}
+		.navRight {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+		}
+		.tabs {
+			gap: 20px;
+			.primeVideo {
+				font-size: 14px;
+			}
+			.menu {
+				font-size: 14px;
+				letter-spacing: 0.04em;
+				font-weight: 600;
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+	.dropdown {
+		width: 16px;
+		height: 16px;
+	}
+
+	.navbarSection .tabs .active {
+		margin: 0px 10px;
+		width: auto;
+	}
 }

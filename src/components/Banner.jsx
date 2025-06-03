@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import blueLogo from "../assets/blueLogo.png";
 import cart from "../assets/cart.svg";
 import arrowButton from "../assets/right-arrow.png";
-import addIcon from "../assets/add.svg"
-import infoIcon from "../assets/info.svg"
+import addIcon from "../assets/add.svg";
+import infoIcon from "../assets/info.svg";
 import "../styles/Banner.less";
 import axios from "./axios";
 import requests from "./request";
@@ -11,6 +11,7 @@ import requests from "./request";
 function Banner() {
 	const [movies, setMovies] = useState([]);
 	const [currentIndex, setCurrentIndex] = useState(0);
+	const [touchStartX, setTouchStartX] = useState(null);
 
 	const movie = movies[currentIndex] || {};
 
@@ -18,7 +19,6 @@ function Banner() {
 
 	useEffect(() => {
 		async function fetchData() {
-			//to fetch top rated moviesfor banner section
 			const request = await axios.get(requests.fetchTopRated);
 			const values = request.data.results.slice(1, 7);
 			setMovies(values || []);
@@ -26,13 +26,37 @@ function Banner() {
 		}
 		fetchData();
 	}, []);
-	// Button handlers for carousel navigation
+
 	const handlePrev = () => {
 		setCurrentIndex((prev) => (prev === 0 ? movies.length - 1 : prev - 1));
 	};
 
 	const handleNext = () => {
 		setCurrentIndex((prev) => (prev === movies.length - 1 ? 0 : prev + 1));
+	};
+
+	// Touch handlers for mobile swipe
+	const handleTouchStart = (e) => {
+		setTouchStartX(e.touches[0].clientX);
+	};
+
+	const handleTouchMove = (e) => {
+		// Prevent scrolling while swiping
+		if (touchStartX !== null) e.preventDefault();
+	};
+
+	const handleTouchEnd = (e) => {
+		if (touchStartX === null) return;
+		const touchEndX = e.changedTouches[0].clientX;
+		const diff = touchStartX - touchEndX;
+		if (Math.abs(diff) > 50) {
+			if (diff > 0) {
+				handleNext(); // Swipe left
+			} else {
+				handlePrev(); // Swipe right
+			}
+		}
+		setTouchStartX(null);
 	};
 
 	return (
@@ -43,6 +67,9 @@ function Banner() {
 				backgroundImage: movie.backdrop_path ? `url("https://image.tmdb.org/t/p/w1280${movie.backdrop_path}")` : "none",
 				backgroundPosition: "center center",
 			}}
+			onTouchStart={handleTouchStart}
+			onTouchMove={handleTouchMove}
+			onTouchEnd={handleTouchEnd}
 		>
 			<div className="banner__contents">
 				<img loading="lazy" src={blueLogo} alt="Prime Video Logo" className="banner__logo" />
@@ -56,8 +83,12 @@ function Banner() {
 						<br />
 						Watch now
 					</button>
-					<div className="bannerIcons"><img src={addIcon} alt="add" className="addIcon"/></div>
-					<div className="bannerIcons"><img src={infoIcon} alt="info" className="infoIcon"/></div>
+					<div className="bannerIcons">
+						<img src={addIcon} alt="add" className="addIcon" />
+					</div>
+					<div className="bannerIcons">
+						<img src={infoIcon} alt="info" className="infoIcon" />
+					</div>
 				</div>
 				<div className="watchprime">
 					<img loading="lazy" src={cart} />
