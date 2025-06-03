@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import blueLogo from "../assets/blueLogo.png";
 import cart from "../assets/cart.svg";
 import arrowButton from "../assets/right-arrow.png";
+import addIcon from "../assets/add.svg"
+import infoIcon from "../assets/info.svg"
 import "../styles/Banner.less";
 import axios from "./axios";
 import requests from "./request";
@@ -54,6 +56,8 @@ function Banner() {
 						<br />
 						Watch now
 					</button>
+					<div className="bannerIcons"><img src={addIcon} alt="add" className="addIcon"/></div>
+					<div className="bannerIcons"><img src={infoIcon} alt="info" className="infoIcon"/></div>
 				</div>
 				<div className="watchprime">
 					<img loading="lazy" src={cart} />
