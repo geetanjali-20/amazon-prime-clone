@@ -1,12 +1,55 @@
-# React + Vite
+# 🎬 Amazon Prime Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and dynamic clone of Amazon Prime Video, built using modern frontend technologies. It features movie listings, hover effects, and UI inspired by the official platform.
 
-Currently, two official plugins are available:
+🚀 [Live Demo](https://amazon-prime-clone-five.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📸 Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![image](https://github.com/user-attachments/assets/ecd87070-ccf6-4475-a58d-f8656ded6d27)
+
+
+---
+
+## 🛠️ Tech Stack
+
+- **React.js** – Core UI library
+- **CSS / LESS** – Styling
+- **TMDB API** – Fetching movie data
+- **Axios / Fetch** – API integration
+- **Vercel** – Deployment
+
+---
+
+## ✨ Features
+
+- 🎞️ Movie and TV Show listing using TMDB API   
+- 🎨 Responsive design for all screen sizes  
+- 🖼️ Hover effects for movie cards  
+- 🌙 Dark UI resembling Amazon Prime
+
+---
+
+## 📁 Folder Structure
+
+src/
+├── components/ # Reusable UI components
+├── pages/ # Main pages (Home, etc.)
+├── api/ # TMDB API integration
+├── assets/ # Images, logos, etc.
+└── App.js # Main app entry
+
+
+
+---
+
+🧑‍🎨 Credits
+Movie data from TMDB API
+
+Design inspired by Amazon Prime Video
+
+⭐ Support
+If you like this project, consider giving it a ⭐ on GitHub!
+
